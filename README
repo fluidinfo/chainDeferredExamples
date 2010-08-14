@@ -7,6 +7,7 @@ might go about addressing these issues. Note that it's not suggested as a
 perfect solution, just a possible direction. Deferreds are complicated and
 the tdefer.py class probably gets things wrong in some cases. So tdefer.py
 is just a pointer to how we might do things, intended to start discussion.
+(tdefer.py is based on Twisted 10.1)
 
 To run an example using normal deferreds, invoke it using Python from the
 command line. E.g.,
@@ -26,4 +27,4 @@ To run with tdefer.py add an argument (anything at all):
 
 Terry Jones
 terry@fluidinfo.com
-@terrycojones
+http://twitter.com/terrycojones
