@@ -1,0 +1,29 @@
+Here are some commented examples of how the chainDeferred method in
+Twisted's Deferred class can be a bit surprising, or cause errors, or
+perhaps even dangerous (not calling cancel on chained deferreds).
+
+There's an alternate Deferred class in tdefer.py that shows one way we
+might go about addressing these issues. Note that it's not suggested as a
+perfect solution, just a possible direction. Deferreds are complicated and
+the tdefer.py class probably gets things wrong in some cases. So tdefer.py
+is just a pointer to how we might do things, intended to start discussion.
+
+To run an example using normal deferreds, invoke it using Python from the
+command line. E.g.,
+
+    $ python uncalled.py
+    cancel one
+    cancelled one
+
+To run with tdefer.py add an argument (anything at all):
+
+    $ python uncalled.py xxx
+    cancel one
+    cancelled one
+    cancel two
+    cancelled two
+
+
+Terry Jones
+terry@fluidinfo.com
+@terrycojones
